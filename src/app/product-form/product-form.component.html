@@ -1,0 +1,35 @@
+<div class="add-product-section">
+  <h2>Add Product</h2>
+  
+  <div class="form-group">
+    <label for="name">Name</label>
+    <input 
+      type="text" 
+      id="name"
+      [(ngModel)]="productName" 
+      placeholder="Enter name"
+    />
+  </div>
+
+  <div class="form-group">
+    <label for="price">Price</label>
+    <input 
+      type="number" 
+      id="price"
+      [(ngModel)]="productPrice" 
+      placeholder="Enter price"
+    />
+  </div>
+
+  <div class="form-group">
+    <label for="category">Category</label>
+    <input 
+      type="text" 
+      id="category"
+      [(ngModel)]="productCategory" 
+      placeholder="Enter category"
+    />
+  </div>
+
+  <button class="add-btn" (click)="addProduct()">Add</button>
+</div>

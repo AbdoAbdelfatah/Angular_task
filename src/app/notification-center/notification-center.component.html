@@ -1,0 +1,44 @@
+<div class="notification-center">
+  <h1>Notification</h1>
+
+  <div class="notification-options">
+    <button 
+      class="notification-btn success-btn" 
+      (click)="selectNotification('success')">
+      Success
+    </button>
+    <button 
+      class="notification-btn error-btn" 
+      (click)="selectNotification('error')">
+      Error
+    </button>
+    <button 
+      class="notification-btn warning-btn" 
+      (click)="selectNotification('warning')">
+      Warning
+    </button>
+    <button 
+      class="notification-btn info-btn" 
+      (click)="selectNotification('info')">
+      Info
+    </button>
+  </div>
+
+  <div class="notification-display" [ngSwitch]="selectedNotification">
+    <div *ngSwitchCase="'success'" class="notification-card success-card">
+      <span class="notification-label">Success</span>
+    </div>
+
+    <div *ngSwitchCase="'error'" class="notification-card error-card">
+      <span class="notification-label">Error</span>
+    </div>
+
+    <div *ngSwitchCase="'warning'" class="notification-card warning-card">
+      <span class="notification-label">Warning</span>
+    </div>
+
+    <div *ngSwitchCase="'info'" class="notification-card info-card">
+      <span class="notification-label">Info</span>
+    </div>
+  </div>
+</div>

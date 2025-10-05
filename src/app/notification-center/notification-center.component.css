@@ -1,0 +1,152 @@
+.notification-center {
+  padding: 40px 20px;
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: black;
+  border: 5px solid black;
+  border-radius: 9px;
+}
+
+.notification-center h1 {
+  text-align: center;
+  font-size: 36px;
+  color: #ffffff;
+  margin-bottom: 40px;
+}
+
+.notification-options {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.notification-btn {
+  padding: 12px 30px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: white;
+  text-transform: capitalize;
+}
+
+.notification-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.success-btn {
+  background-color: #5cb85c;
+}
+
+.success-btn:hover {
+  background-color: #4cae4c;
+}
+
+.error-btn {
+  background-color: #d9534f;
+}
+
+.error-btn:hover {
+  background-color: #c9302c;
+}
+
+.warning-btn {
+  background-color: #f0ad4e;
+}
+
+.warning-btn:hover {
+  background-color: #ec971f;
+}
+
+.info-btn {
+  background-color: #5bc0de;
+}
+
+.info-btn:hover {
+  background-color: #46b8da;
+}
+
+.notification-display {
+  display: flex;
+  justify-content: center;
+  min-height: 100px;
+}
+
+.notification-card {
+  width: 100%;
+  max-width: 700px;
+  padding: 30px 40px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  color: white;
+  font-size: 18px;
+  justify-content: center;
+  
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.notification-label {
+  font-weight: 700;
+  font-size: 24px;
+  min-width: 120px;
+}
+
+.notification-message {
+  flex: 1;
+  font-size: 20px;
+}
+
+.success-card {
+  background-color: #5cb85c;
+}
+
+.error-card {
+  background-color: #d9534f;
+}
+
+.warning-card {
+  background-color: #f0ad4e;
+}
+
+.info-card {
+  background-color: #5bc0de;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .notification-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .notification-label {
+    min-width: auto;
+  }
+
+  .notification-options {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .notification-btn {
+    width: 100%;
+  }
+}

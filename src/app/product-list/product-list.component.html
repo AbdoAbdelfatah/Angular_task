@@ -1,0 +1,30 @@
+<div class="products-grid">
+  <div *ngFor="let product of products" class="product-card">
+    <h2>{{ product.name }}</h2>
+    <p class="price">Price: {{ product.price }}</p>
+    <p class="category">Category: {{ product.category }}</p>
+    
+    <div class="button-group">
+      <button 
+        class="btn-favorite" 
+        [class.active]="product.isFavorite"
+        (click)="toggleFavorite(product.id)">
+        Favorite
+      </button>
+      <button 
+        class="btn-delete" 
+        (click)="deleteProduct(product.id)">
+        Delete
+      </button>
+      <button 
+        class="btn-update" 
+        (click)="updateProduct(product)">
+        Update
+      </button>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="products.length === 0" class="no-products">
+  <p>Add products</p>
+</div>
