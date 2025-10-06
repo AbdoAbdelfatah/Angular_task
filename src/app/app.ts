@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { ProductFormComponent } from './product-form/product-form.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { NotificationCenterComponent } from './notification-center/notification-center.component';
-import { Product } from './models/product.model';
+import { Product } from './types';
 
 @Component({
   selector: 'app-root',
