@@ -1,0 +1,44 @@
+<div class="container py-4">
+  <h3 class="fw-bold text-primary mb-4">Profile Settings</h3>
+
+  <div class="card border-0 shadow-sm">
+    <div class="card-body">
+      <form #settingsForm="ngForm" (ngSubmit)="updateName()">
+        <div class="mb-3">
+          <label for="firstName" class="form-label fw-semibold">First Name</label>
+          <input 
+            type="text" 
+            class="form-control"
+            id="firstName"
+            name="firstName"
+            [(ngModel)]="firstName"
+            placeholder="Enter your first name"
+            required
+          />
+        </div>
+
+        <div class="mb-3">
+          <label for="lastName" class="form-label fw-semibold">Last Name</label>
+          <input 
+            type="text" 
+            class="form-control"
+            id="lastName"
+            name="lastName"
+            [(ngModel)]="lastName"
+            placeholder="Enter your last name"
+            required
+          />
+        </div>
+
+        <button 
+          type="submit" 
+          class="btn btn-primary w-100"
+          [disabled]="!settingsForm.form.valid"
+         >
+
+          Update Name
+        </button>
+      </form>
+    </div>
+  </div> 
+</div>
